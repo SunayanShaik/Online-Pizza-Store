@@ -1,4 +1,8 @@
 # Online-Pizza-Store
+
+A web-application that enables students to order and have pizza delivered 
+at the college dormitory using REST web services and MVC architecture.
+
 README for pizza2 setup  
 
 This project is meant to be installed at /cs637/username/proj2/pizza2 
