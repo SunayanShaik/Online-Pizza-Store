@@ -1,0 +1,6 @@
+ RewriteEngine On
+ RewriteBase /ch24_guitar_shop/rest/
+
+ RewriteCond %{REQUEST_FILENAME} !-f [OR]
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^.*$ index.php [L]

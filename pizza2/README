@@ -1,0 +1,42 @@
+README for pizza2 solution
+
+This project is meant to be installed at /cs637/username/proj2/pizza2
+relative to the document root, where username is your topcat username.
+
+Under Windows XAMPP, at \xampp\htdocs\cs637\username\proj2\pizza2
+Under Mac OSX XAMPP, at /Applications/XAMPP/xampfiles/cs637/username/proj2/pizza2
+Under Linux XAMPP, at /opt/lampp/cs637/username/proj2/pizza2
+
+To be ready to run this project on topcat, you need to edit in your
+topcat username in one place in these sources, as explained in
+comments in these files, in model/database.php
+
+Once this edit is done, the project is set up to be deployed
+at c:\xampp\htdocs\cs637\username\proj2\pizza2   for XAMPP on Windows
+at /Application/XAMPP/htdocs/cs637/username/proj2/pizza2   for XAMPP on Mac
+at /opt/lampp/htdocs/cs637/username/proj2/pizza2   for XAMPP on Linux
+at /var/www/html/cs637/username/proj2/pizza2  for apache on topcat
+where username is your topcat username.
+
+Note that the error handling has been simplified by combining database_error.php
+into error.php, where the database case is discovered by instanceof on the 
+error object. The catches are now on Exception, so more kinds can be caught,
+including the Guzzle exceptions needed for the web services.
+
+For better security, an .htaccess file has been added to directories
+database and model, both of which contain database credentials. The
+.htaccess file (with contents "deny from all" ensures that no files in the 
+directory may be accessed from the web, assuming an Apache web server.
+
+Changes from pizza2 setup:
+admin/day/index.php, day_list.php: handle next-day inventory actions
+admin/day/day_helpers.php: new file for helper methods for controller
+admin/day/web_services.php: methods using Guzzle for individual GET/POST actions
+database/createdb.sql, dropdb.sql: added tables for inventory and undelivered orders
+model/initial.php: reinitialize inventory and undelivered_orders when needed
+model/inventory_db.php: methods for inventory management
+pizza/index.php: check new order to see if enough inventory, cause error if not
+pizza/order_pizza.php: display error message on inventory error
+restclient/index.php: added code to show https: request to youtube API (not part of proj2)
+
+

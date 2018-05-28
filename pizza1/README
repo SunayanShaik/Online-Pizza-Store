@@ -1,0 +1,44 @@
+README for pizza1_setup_soln
+Files edited for this solution for hw3:
+topping/topping_list.php: add link to add-topping page
+topping/topping_add.php: new file for add-topping form
+model/topping_db.php: implement add_topping function
+day/index.php: add require of initial.php, needed for db-init button
+
+Please fix your own day/index.php by adding the needed require of 
+initial.php, so that the initialize-db button will work. It is
+needed for testing of the pizza1 delivery.
+
+Hopefully all the directories and filenames you need show
+up in this setup.  However the file contents need finishing.
+
+Please make sure you can run the project on topcat, because
+that's where the grader will run it.  See database.php for
+code that lets you run on topcat. Be sure to load the pizza
+database in your mysql account on topcat.
+
+This project is set up to be installed at /cs637/username/pizza1
+relative to the document root, where username is your topcat username.
+
+Under Windows XAMPP, at \xampp\htdocs\cs637\username\pizza1
+Under Mac OSX XAMPP, at /Applications/XAMPP/xampfiles/cs637/username/pizza1
+Under Linux XAMPP, at /opt/lampp/cs637/username/pizza1
+
+On topcat, at /var/www/html/cs637/username/pizza1
+You have private access to this area using UNIX file permissions,
+just as you have private access to your ~/cs637 directory area.
+
+To be ready to run this project on topcat, you need to edit in your
+topcat username in two places in these sources, as explained in
+comments in these files:
+1. in model/database.php
+2. in view/header.php 
+To run it with XAMPP, only the second one is needed, but the first
+one doesn't hurt, so it is recommended to do both at once.
+
+Once these edits are done, the project is set up to be deployed
+at c:\xampp\htdocs\cs637\username\pizza1   for XAMPP on Windows
+at /Application/XAMPP/htdocs/cs637/username/pizza1   for XAMPP on Mac
+at /opt/lampp/htdocs/cs637/username/pizza1   for XAMPP on Linux
+at /var/www/html/cs637/username/pizza1 for apache on topcat
+where username is your topcat username.

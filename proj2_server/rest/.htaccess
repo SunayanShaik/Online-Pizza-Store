@@ -1,0 +1,6 @@
+# Map any path that gets to this directory to index.php here
+# The regex ^.*$ matches anything
+ RewriteEngine On
+ RewriteCond %{REQUEST_FILENAME} !-f [OR]
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^.*$ index.php [L]

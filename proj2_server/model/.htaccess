@@ -1,0 +1,2 @@
+# prevent access from web to files containing database credentials
+deny from all
